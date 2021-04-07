@@ -37,9 +37,11 @@ class MovieDetail extends Component {
                 if (!response.ok) {
                     throw Error(response.statusText);
                 }
-                new_review = response.reviews;
+                return response.json();
             }).then((res) => {
                 // dispatch(movieFetched(res.movies));
+                new_review = res.reviews;
+                console.log(res);
             })
             this.props.selectedMovie.reviews = new_review;
             console.log("opppppppp");
