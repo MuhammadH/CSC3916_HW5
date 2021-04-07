@@ -5,7 +5,7 @@ import runtimeEnv from '@mars/heroku-js-runtime-env'
 function moviesFetched(movies) {
     return {
         type: actionTypes.FETCH_MOVIES,
-        movies: movies
+        movies: movies.movies
     }
 }
 
