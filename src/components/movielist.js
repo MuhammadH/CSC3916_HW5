@@ -37,7 +37,7 @@ class MovieList extends Component {
             console.log(movieList);
 
             return (
-                <div>{movielist}</div>
+                <div>{movieList}</div>
                 /*
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
