@@ -69,6 +69,7 @@ export function fetchMovies() {
             if (!response.ok) {
                 throw Error(response.statusText);
             }
+            console.log("ah");
             console.log(response.json());
             return response.json();
         }).then((res) => {
