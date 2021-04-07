@@ -29,14 +29,14 @@ class MovieList extends React.Component {
     }
 
     render() {
-        const MovieListCarousel = ({movieList}) => {
-            if (!movieList) {
+        const MovieListCarousel = ({movies}) => {
+            if (!movies) {
                 return <div>Loading....</div>
             }
 
-            console.log(movieList);
+            console.log(movies);
             console.log('plz show anything here');
-            let something = movieList.length;
+            let something = movies.length;
 
             return (
                 <div>{something}</div>
@@ -64,7 +64,7 @@ class MovieList extends React.Component {
         }
 
         return (
-            <MovieListCarousel movieList={this.props.movies} />
+            <MovieListCarousel movies={this.props.movies} />
         )
     }
 }
