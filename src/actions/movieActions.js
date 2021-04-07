@@ -29,7 +29,7 @@ export function setMovie(movie) {
     }
 }
 
-export function fetchMovie(movieId) {
+export function fetchMovie(title) {
     const env = runtimeEnv();
     return dispatch => {
         return fetch(`${env.REACT_APP_API_URL}/movies`, {
@@ -37,8 +37,10 @@ export function fetchMovie(movieId) {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': localStorage.getItem('token'),
-                "movie": movieId,
+                // 'Authorization': localStorage.getItem('token'),
+            },
+            body: {
+                "movie": title,
                 "reviews": true
             },
             mode: 'cors'
