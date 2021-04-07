@@ -37,6 +37,8 @@ class MovieList extends Component {
             console.log(movieList);
 
             return (
+                <div>{movielist}</div>
+                /*
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
                         <Carousel.Item key={movie._id}>
@@ -54,6 +56,8 @@ class MovieList extends Component {
                     )}
 
                 </Carousel>
+
+                 */
             )
         }
 
