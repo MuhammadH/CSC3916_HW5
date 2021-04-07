@@ -7,7 +7,7 @@ import { Carousel } from 'react-bootstrap';
 import { BsStarFill} from 'react-icons/bs'
 import {LinkContainer} from 'react-router-bootstrap';
 
-class MovieList extends Component {
+class MovieList extends React.Component {
     constructor(props) {
         super(props);
         this.handleSelect = this.handleSelect.bind(this);
@@ -36,12 +36,7 @@ class MovieList extends Component {
 
             console.log(movieList);
             console.log('plz show anything here');
-            let something = -100;
-            if (movieList.length > 0) {
-                something = movieList.length;
-            } else {
-                something = movieList.length;
-            }
+            let something = movieList.length;
 
             return (
                 <div>{something}</div>
