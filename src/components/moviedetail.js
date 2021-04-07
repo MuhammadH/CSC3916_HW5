@@ -29,7 +29,6 @@ class MovieDetail extends Component {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
-                    'Authorization': localStorage.getItem('token'),
                     "movie": title,
                     "reviews": true
                 },
@@ -43,6 +42,10 @@ class MovieDetail extends Component {
                 // dispatch(movieFetched(res.movies));
             })
             this.props.selectedMovie.reviews = new_review;
+            console.log("opppppppp")
+            console.log("opppppppp")
+            console.log(this.props.selectedMovie.reviews)
+            console.log("opppppppp")
 
             return (
                 <Card>
