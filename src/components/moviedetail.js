@@ -42,10 +42,10 @@ class MovieDetail extends Component {
                 // dispatch(movieFetched(res.movies));
             })
             this.props.selectedMovie.reviews = new_review;
-            console.log("opppppppp")
-            console.log("opppppppp")
-            console.log(this.props.selectedMovie.reviews)
-            console.log("opppppppp")
+            console.log("opppppppp");
+            console.log("opppppppp");
+            console.log(new_review);
+            console.log("opppppppp");
 
             return (
                 <Card>
