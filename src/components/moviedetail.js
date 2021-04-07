@@ -66,8 +66,8 @@ class MovieDetail extends Component {
                     </ListGroup>
                     <Card.Body>
                         <p>
-                            <b>{new_review.reviewer_name}</b>&nbsp; {new_review.review}
-                            &nbsp;  <BsStarFill /> {new_review.rating}
+                            <b>{this.props.selectedMovie.reviews.reviewer_name}</b>&nbsp; {this.props.selectedMovie.reviews.review}
+                            &nbsp;  <BsStarFill /> {this.props.selectedMovie.reviews.rating}
                         </p>
                         {
                             /*
