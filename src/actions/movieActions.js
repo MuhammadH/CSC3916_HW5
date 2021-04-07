@@ -57,27 +57,24 @@ export function fetchMovie(title) {
 
 
 export function fetchMovies() {
-    console.log("qah");
+    console.log("starting fetch movies");
     const env = runtimeEnv();
     return dispatch => {
-        return fetch(`https://csci3916-hw-3-m.herokuapp.com/movies`, {
+        return fetch(`${env.REACT_APP_API_URL}/movies`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('token')
             },
-            body: {
-                'body': 'empty',
-            },
             mode: 'cors'
         }).then((response) => {
-            console.log("bah");
+            console.log("getting response");
             if (!response.ok) {
                 throw Error(response.statusText);
             }
-            console.log("ah");
             console.log(response.json());
+            console.log(response.json().movies);
             return response.json();
         }).then((res) => {
             dispatch(moviesFetched(res.movies));
