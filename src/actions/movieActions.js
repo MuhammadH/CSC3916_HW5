@@ -63,7 +63,7 @@ export function fetchMovies() {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                // 'Authorization': localStorage.getItem('token')
+                'Authorization': localStorage.getItem('token')
             },
             body: {
 
