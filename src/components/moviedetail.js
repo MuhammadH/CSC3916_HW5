@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
+import runtimeEnv from '@mars/heroku-js-runtime-env'
 
 class MovieDetail extends Component {
 
@@ -22,6 +23,7 @@ class MovieDetail extends Component {
 
             let title = this.props.selectedMovie.title;
             let new_review = {};
+            const env = runtimeEnv();
             fetch(`${env.REACT_APP_API_URL}/movies`, {
                 method: 'GET',
                 headers: {
