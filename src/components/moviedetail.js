@@ -20,6 +20,30 @@ class MovieDetail extends Component {
                 return <div>Loading....</div>
             }
 
+            let title = this.props.selectedMovie.title;
+            let new_review = {};
+            fetch(`${env.REACT_APP_API_URL}/movies`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Authorization': localStorage.getItem('token'),
+                },
+                body: {
+                    "movie": title,
+                    "reviews": true
+                },
+                mode: 'cors'
+            }).then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                new_review = response.reviews;
+            }).then((res) => {
+                // dispatch(movieFetched(res.movies));
+            })
+            this.props.selectedMovie.reviews = new_review;
+
             return (
                 <Card>
                     <Card.Header>Movie Detail</Card.Header>
@@ -36,7 +60,21 @@ class MovieDetail extends Component {
                         </ListGroupItem>
                     </ListGroup>
                     <Card.Body>
-                        
+                        <p>
+                            <b>{this.props.selectedMovie.reviews.reviewer_name}</b>&nbsp; {this.props.selectedMovie.reviews.review}
+                            &nbsp;  <BsStarFill /> {this.props.selectedMovie.reviews.rating}
+                        </p>
+                        {
+                            /*
+                            this.props.selectedMovie.reviews.map((review, i) =>
+                            <p key={i}>
+                                <b>{review.reviewer_name}</b>&nbsp; {review.review}
+                                &nbsp;  <BsStarFill /> {review.rating}
+                            </p>
+                        )
+
+                             */
+                        }
                     </Card.Body>
                 </Card>
             )
