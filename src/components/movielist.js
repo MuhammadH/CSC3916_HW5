@@ -36,11 +36,11 @@ class MovieList extends Component {
 
             console.log(movieList);
             console.log('plz show anything here');
-            let something = '';
+            let something = -100;
             if (movieList.length > 0) {
-                something = 'cool';
+                something = movieList.length;
             } else {
-                something = 'not cool';
+                something = movieList.length;
             }
 
             return (

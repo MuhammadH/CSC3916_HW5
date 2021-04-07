@@ -58,10 +58,12 @@ export function fetchMovie(title) {
 export function fetchMovies() {
     const env = runtimeEnv();
     return dispatch => {
-        return fetch(`${env.REACT_APP_API_URL}/movies`, {
+        return fetch(`https://csci3916-hw-3-m.herokuapp.com/movies`, {
             method: 'GET',
             headers: {
-                // 'Accept': 'application/json',
+                'Accept': '*/*',
+                'Accept-Encoding' : 'gzip, deflate, br',
+                'Connection' : 'keep-alive',
                 // 'Content-Type': 'application/json',
                 // 'Authorization': localStorage.getItem('token')
                 // "reviews": true
