@@ -30,8 +30,6 @@ class MovieDetail extends Component {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
                     'Authorization': localStorage.getItem('token'),
-                },
-                body: {
                     "movie": title,
                     "reviews": true
                 },
