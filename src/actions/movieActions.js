@@ -63,9 +63,11 @@ export function fetchMovies() {
             headers: {
                 // 'Content-Type': 'application/json',
                 // 'Authorization': localStorage.getItem('token')
-                // "reviews": true
             },
-            // mode: 'cors'
+            body: {
+                
+            },
+            mode: 'cors'
         }).then((response) => {
             console.log("bah");
             if (!response.ok) {
