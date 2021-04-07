@@ -57,6 +57,7 @@ export function fetchMovie(title) {
 
 
 export function fetchMovies() {
+    console.log("qah");
     const env = runtimeEnv();
     return dispatch => {
         return fetch(`https://csci3916-hw-3-m.herokuapp.com/movies`, {
@@ -79,7 +80,7 @@ export function fetchMovies() {
             console.log(response.json());
             return response.json();
         }).then((res) => {
-            dispatch(moviesFetched(res));
+            dispatch(moviesFetched(res.movies));
         }).catch((e) => console.log(e));
     }
 }
