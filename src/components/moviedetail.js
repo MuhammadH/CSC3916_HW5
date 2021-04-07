@@ -22,7 +22,7 @@ class MovieDetail extends Component {
             }
 
             let title = this.props.selectedMovie.title;
-            let new_review = {};
+            let new_review = "";
             const env = runtimeEnv();
             fetch(`${env.REACT_APP_API_URL}/movies`, {
                 method: 'GET',
@@ -66,8 +66,8 @@ class MovieDetail extends Component {
                     </ListGroup>
                     <Card.Body>
                         <p>
-                            <b>{this.props.selectedMovie.reviews.reviewer_name}</b>&nbsp; {this.props.selectedMovie.reviews.review}
-                            &nbsp;  <BsStarFill /> {this.props.selectedMovie.reviews.rating}
+                            <b>{new_review.reviewer_name}</b>&nbsp; {new_review.review}
+                            &nbsp;  <BsStarFill /> {new_review.rating}
                         </p>
                         {
                             /*
