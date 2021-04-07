@@ -39,8 +39,6 @@ class MovieList extends Component {
             let something = movieList.length;
 
             return (
-                <div>{something}</div>
-                /*
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
                         <Carousel.Item key={movie._id}>
@@ -59,7 +57,7 @@ class MovieList extends Component {
 
                 </Carousel>
 
-                 */
+
             )
         }
 
