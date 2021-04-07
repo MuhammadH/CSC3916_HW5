@@ -61,14 +61,11 @@ export function fetchMovies() {
         return fetch(`https://csci3916-hw-3-m.herokuapp.com/movies`, {
             method: 'GET',
             headers: {
-                'Accept': '*/*',
-                'Accept-Encoding' : 'gzip, deflate, br',
-                'Connection' : 'keep-alive',
                 // 'Content-Type': 'application/json',
                 // 'Authorization': localStorage.getItem('token')
                 // "reviews": true
             },
-            mode: 'cors'
+            // mode: 'cors'
         }).then((response) => {
             console.log("bah");
             if (!response.ok) {
