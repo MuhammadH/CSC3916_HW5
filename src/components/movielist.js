@@ -34,6 +34,8 @@ class MovieList extends Component {
                 return <div>Loading....</div>
             }
 
+            console.log(movieList);
+
             return (
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
