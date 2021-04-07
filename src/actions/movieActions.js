@@ -59,10 +59,10 @@ export function fetchMovies() {
         return fetch(`${env.REACT_APP_API_URL}/movies`, {
             method: 'GET',
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': localStorage.getItem('token'),
-                "reviews": true
+                // 'Accept': 'application/json',
+                // 'Content-Type': 'application/json',
+                // 'Authorization': localStorage.getItem('token')
+                // "reviews": true
             },
             mode: 'cors'
         }).then((response) => {
