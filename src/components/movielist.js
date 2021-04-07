@@ -35,9 +35,16 @@ class MovieList extends Component {
             }
 
             console.log(movieList);
+            console.log('plz show anything here');
+            let something = '';
+            if (movieList.length > 0) {
+                something = 'cool';
+            } else {
+                something = 'not cool';
+            }
 
             return (
-                <div>{movieList}</div>
+                <div>{something}</div>
                 /*
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
