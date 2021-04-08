@@ -43,23 +43,23 @@ class Review extends Component {
         return(
             <Form horizontal>
                 <FormGroup controlId="rating_sec">
-                    <Col componentClass={FormLabel} sm={2}>
+                    <Col componentClass={FormLabel}>
                         Enter a Rating:
                     </Col>
-                    <Col sm={10}>
-                        <FormControl as="textarea" rows="3" required onChange={this.updateEvent} value={this.state.details.rating}/>
+                    <Col>
+                        <FormControl as="textarea" required onChange={this.updateEvent} value={this.state.details.rating}/>
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="review">
-                    <Col componentClass={FormLabel} sm={2}>
+                    <Col componentClass={FormLabel}>
                         Enter a Review
                     </Col>
-                    <Col sm={10}>
-                        <FormControl as="textarea" rows="3" required onChange={this.updateEvent} value={this.state.details.review}/>
+                    <Col>
+                        <FormControl as="textarea" required onChange={this.updateEvent} value={this.state.details.review}/>
                     </Col>
                 </FormGroup>
                 <FormGroup>
-                    <Col smOffset={2} sm={10}>
+                    <Col>
                         <Button onClick={this.review}>Post Review</Button>
                     </Col>
                 </FormGroup>
