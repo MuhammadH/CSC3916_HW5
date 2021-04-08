@@ -37,7 +37,7 @@ class MovieList extends Component {
             console.log(movieList);
             console.log('plz show anything here');
 
-            let avgRs = ['4.88/5 stars', '4.51/5 stars', '4.31/5 stars', '4.19/5 stars', '4.11/5 stars'];
+            let avgRs = ['4.66/5 stars', '4.50/5 stars', '4.33/5 stars', '4.25/5 stars', '4.00/5 stars'];
             let links = ['https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg',
                 'https://upload.wikimedia.org/wikipedia/en/1/1f/Knives_Out_poster.jpeg',
                 'https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg',
