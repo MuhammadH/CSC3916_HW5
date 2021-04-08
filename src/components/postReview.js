@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
-// import {submitReview} from '../actions/movieActions';
 import { Form, FormLabel, FormControl, FormGroup, Col, Button} from 'react-bootstrap';
+// import { postNewReview } from '../actions/movieActions';
 
 class PostReview extends Component {
     constructor(movieIn){
