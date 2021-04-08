@@ -9,17 +9,17 @@ function moviesFetched(movies) {
     }
 }
 
-function movieFetched(movie) {
+function movieFetched(movies) {
     return {
         type: actionTypes.FETCH_MOVIE,
-        selectedMovie: movie
+        selectedMovie: movies
     }
 }
 
-function movieSet(movie) {
+function movieSet(movies) {
     return {
         type: actionTypes.SET_MOVIE,
-        selectedMovie: movie
+        selectedMovie: movies
     }
 }
 
@@ -47,8 +47,11 @@ export function fetchMovie(title) {
             }
             return response.json()
         }).then((res) => {
-            res.movies.reviews = res.reviews;
-            dispatch(movieFetched(res.movies));
+            let new_thing = res.movies;
+            new_thing.reviews = res.reviews;
+            // res.movies.reviews = res.reviews;
+            // dispatch(movieFetched(res.movies));
+            dispatch(movieFetched(new_thing));
         }).catch((e) => console.log(e));
     }
 }
