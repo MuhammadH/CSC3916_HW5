@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 // import {submitReview} from '../actions/movieActions';
-import { Form, Col, FormGroup, FormControl, Button, FormLabel} from 'react-bootstrap';
+import { Form, FormLabel, FormControl, FormGroup, Col, Button} from 'react-bootstrap';
 
-
-class Review extends Component {
-    constructor(rev){
-        super(rev);
+class PostReview extends Component {
+    constructor(movieIn){
+        super(movieIn);
         this.updateEvent = this.updateEvent.bind(this);
         this.review = this.review.bind(this);
         this.state = {
-            details:{
-                movie: rev.movie.title,
-                review: '',
+            reviewData:{
+                movie: movieIn.movie.title,
                 reviewer_name: '',
+                review: '',
                 rating: ''
             }
         };
@@ -21,22 +20,23 @@ class Review extends Component {
     }
 
     updateEvent(event){
-        let updateEvent = Object.assign({}, this.state.details);
+        let updateEvent = Object.assign({}, this.state.reviewData);
 
         if(event.target.id === 'rating_sec') {
             updateEvent.rating = event.target.value;
         }
-        else {
-            updateEvent[event.target.id] = event.target.value;
+        if(event.target.id === 'review_sec') {
+            updateEvent.rating = event.target.value;
         }
+
         this.setState({
-            details: updateEvent
+            reviewData: updateEvent
         });
     }
 
     review() {
         // const {dispatch} = this.props;
-        // dispatch(submitReview(this.state.details, this.props.movie._id));
+        // dispatch(submitReview(this.state.reviewData, this.props.movie._id));
     }
 
     render() {
@@ -47,20 +47,20 @@ class Review extends Component {
                         Enter a Rating:
                     </Col>
                     <Col>
-                        <FormControl as="textarea" required onChange={this.updateEvent} value={this.state.details.rating}/>
+                        <FormControl as="textarea" required onChange={this.updateEvent} value={this.state.reviewData.rating}/>
                     </Col>
                 </FormGroup>
-                <FormGroup controlId="review">
+                <FormGroup controlId="review_sec">
                     <Col componentClass={FormLabel}>
                         Enter a Review
                     </Col>
                     <Col>
-                        <FormControl as="textarea" required onChange={this.updateEvent} value={this.state.details.review}/>
+                        <FormControl as="textarea" required onChange={this.updateEvent} value={this.state.reviewData.review}/>
                     </Col>
                 </FormGroup>
                 <FormGroup>
                     <Col>
-                        <Button onClick={this.review}>Post Review</Button>
+                        <Button onClick={this.review}>Post Your Review!</Button>
                     </Col>
                 </FormGroup>
             </Form>
@@ -70,8 +70,7 @@ class Review extends Component {
 }
 
 const mapStateToProps = state => {
-    return{
-    }
+    return{}
 };
 
-export default connect(mapStateToProps)(Review);
+export default connect(mapStateToProps)(PostReview);
