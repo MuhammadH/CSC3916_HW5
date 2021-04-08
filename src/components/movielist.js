@@ -36,12 +36,6 @@ class MovieList extends Component {
 
             console.log(movieList);
             console.log('plz show anything here');
-            let something = movieList.length;
-
-            let avgRating = "1/5 stars";
-            if (movie.title == "Avengers: Endgame") {
-                avgRating = "2/5 stars";
-            }
 
             let avgRs = ['2.41/5 stars', '4.88/5 stars', '3.24/5 stars', '4.04/5 stars', '4.74/5 stars'];
             let i = 0;
