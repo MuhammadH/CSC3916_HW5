@@ -5,6 +5,7 @@ import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 import runtimeEnv from '@mars/heroku-js-runtime-env'
+import PostReview from './postReview';
 
 class MovieDetail extends Component {
 
@@ -65,6 +66,9 @@ class MovieDetail extends Component {
                             <b>{this.props.selectedMovie.reviewer_name}</b>&nbsp; {this.props.selectedMovie.review}
                             &nbsp;  <BsStarFill /> {this.props.selectedMovie.rating}
                         </p>
+                    </Card.Body>
+                    <Card.Body>
+                        <PostReview movie={this.props.selectedMovie}/>
                     </Card.Body>
                 </Card>
             )
