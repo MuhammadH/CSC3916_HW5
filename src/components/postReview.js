@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 // import {submitReview} from '../actions/movieActions';
-import { Form, Col, FormGroup, FormControl, Button, ControlLabel} from 'react-bootstrap';
+import { Form, Col, FormGroup, FormControl, Button, FormLabel} from 'react-bootstrap';
 
 
 class Review extends Component {
@@ -43,7 +43,7 @@ class Review extends Component {
         return(
             <Form horizontal>
                 <FormGroup controlId="rating_sec">
-                    <Col componentClass={ControlLabel} sm={2}>
+                    <Col componentClass={FormLabel} sm={2}>
                         Enter a Rating:
                     </Col>
                     <Col sm={10}>
@@ -51,7 +51,7 @@ class Review extends Component {
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="review">
-                    <Col componentClass={ControlLabel} sm={2}>
+                    <Col componentClass={FormLabel} sm={2}>
                         Enter a Review
                     </Col>
                     <Col sm={10}>
