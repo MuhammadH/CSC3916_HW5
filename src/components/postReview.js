@@ -26,7 +26,7 @@ class PostReview extends Component {
             updateEvent.rating = event.target.value;
         }
         if(event.target.id === 'review_sec') {
-            updateEvent.rating = event.target.value;
+            updateEvent.review = event.target.value;
         }
 
         this.setState({
