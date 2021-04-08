@@ -25,6 +25,7 @@ class MovieDetail extends Component {
                 console.log(this.props.selectedMovie.review);
                 console.log(this.props.selectedMovie.rating);
                 console.log(this.props.selectedMovie.reviewer_name);
+                console.log("ryryryryryr");
             }
 
             return (

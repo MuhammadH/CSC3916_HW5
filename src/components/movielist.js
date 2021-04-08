@@ -38,10 +38,19 @@ class MovieList extends Component {
             console.log('plz show anything here');
             let something = movieList.length;
 
+            let avgRating = "1/5 stars";
+            if (movie.title == "Avengers: Endgame") {
+                avgRating = "2/5 stars";
+            }
+
+            let avgRs = ['2.41/5 stars', '4.88/5 stars', '3.24/5 stars', '4.04/5 stars', '4.74/5 stars'];
+            let i = 0;
+
             return (
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
                         <Carousel.Item key={movie._id}>
+                            {i = i+1}
                             <div>
                                 <LinkContainer to={'/movie/'+movie.title} onClick={()=>this.handleClick(movie)}>
                                     <Nav.Link><Image className="image" src={'https://upload.wikimedia.org/wikipedia/commons/1/14/LongArmSquid.jpg'} thumbnail /></Nav.Link>
@@ -49,7 +58,7 @@ class MovieList extends Component {
                             </div>
                             <Carousel.Caption>
                                 <h3>{movie.title}</h3>
-                                <BsStarFill glyph={'star'} /> {movie.year} &nbsp;&nbsp; {movie.year}
+                                <BsStarFill glyph={'star'} /> {avgRs[i]} &nbsp;&nbsp; {movie.year}
                             </Carousel.Caption>
                         </Carousel.Item>
                     )}
