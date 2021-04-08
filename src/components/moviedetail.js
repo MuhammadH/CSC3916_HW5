@@ -28,11 +28,28 @@ class MovieDetail extends Component {
                 console.log("ryryryryryr");
             }
 
+            let imgUrl = '';
+            if (this.props.selectedMovie.title == "Avengers: Endgame") {
+                imgUrl = 'https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg';
+            }
+            else if (this.props.selectedMovie.title == "Knives Out") {
+                imgUrl = 'https://upload.wikimedia.org/wikipedia/en/1/1f/Knives_Out_poster.jpeg';
+            }
+            else if (this.props.selectedMovie.title == "Pulp Fiction") {
+                imgUrl = 'https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg';
+            }
+            else if (this.props.selectedMovie.title == "Good Will Hunting") {
+                imgUrl = 'https://upload.wikimedia.org/wikipedia/en/5/52/Good_Will_Hunting.png';
+            }
+            else if (this.props.selectedMovie.title == "John Wick") {
+                imgUrl = 'https://upload.wikimedia.org/wikipedia/en/9/98/John_Wick_TeaserPoster.jpg';
+            }
+
             return (
                 <Card>
                     <Card.Header>Movie Detail</Card.Header>
                     <Card.Body>
-
+                        <Image className="image" src={imgUrl} thumbnail />
                     </Card.Body>
                     <ListGroup>
                         <ListGroupItem>{this.props.selectedMovie.title}</ListGroupItem>
