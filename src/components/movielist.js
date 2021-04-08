@@ -44,7 +44,6 @@ class MovieList extends Component {
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
                         <Carousel.Item key={movie._id}>
-                            {i = i+1}
                             <div>
                                 <LinkContainer to={'/movie/'+movie.title} onClick={()=>this.handleClick(movie)}>
                                     <Nav.Link><Image className="image" src={'https://upload.wikimedia.org/wikipedia/commons/1/14/LongArmSquid.jpg'} thumbnail /></Nav.Link>
@@ -54,6 +53,7 @@ class MovieList extends Component {
                                 <h3>{movie.title}</h3>
                                 <BsStarFill glyph={'star'} /> {avgRs[i]} &nbsp;&nbsp; {movie.year}
                             </Carousel.Caption>
+                            {"<!--"}{i = i+1}{"-->"}
                         </Carousel.Item>
                     )}
 
