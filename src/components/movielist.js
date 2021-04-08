@@ -38,6 +38,11 @@ class MovieList extends Component {
             console.log('plz show anything here');
 
             let avgRs = ['2.41/5 stars', '4.88/5 stars', '3.24/5 stars', '4.04/5 stars', '4.74/5 stars'];
+            let links = ['https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg',
+                'https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg',
+                'https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg',
+                'https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg',
+                'https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg'];
             let i = 0;
 
             return (
@@ -46,14 +51,14 @@ class MovieList extends Component {
                         <Carousel.Item key={movie._id}>
                             <div>
                                 <LinkContainer to={'/movie/'+movie.title} onClick={()=>this.handleClick(movie)}>
-                                    <Nav.Link><Image className="image" src={'https://upload.wikimedia.org/wikipedia/commons/1/14/LongArmSquid.jpg'} thumbnail /></Nav.Link>
+                                    <Nav.Link><Image className="image" src={links[i]} thumbnail /></Nav.Link>
                                 </LinkContainer>
                             </div>
                             <Carousel.Caption>
                                 <h3>{movie.title}</h3>
                                 <BsStarFill glyph={'star'} /> {avgRs[i]} &nbsp;&nbsp; {movie.year}
                             </Carousel.Caption>
-                            {"<!--"}{i = i+1}{"-->"}
+                            {i = i+1}
                         </Carousel.Item>
                     )}
 
