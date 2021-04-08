@@ -39,7 +39,7 @@ class MovieList extends Component {
 
             let avgRs = ['2.41/5 stars', '4.88/5 stars', '3.24/5 stars', '4.04/5 stars', '4.74/5 stars'];
             let links = ['https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg',
-                'https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_.jpg',
+                'https://upload.wikimedia.org/wikipedia/en/1/1f/Knives_Out_poster.jpeg',
                 'https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg',
                 'https://upload.wikimedia.org/wikipedia/en/5/52/Good_Will_Hunting.png',
                 'https://upload.wikimedia.org/wikipedia/en/9/98/John_Wick_TeaserPoster.jpg'];
