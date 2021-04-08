@@ -51,7 +51,6 @@ export function fetchMovie(title) {
             new_thing.reviewer_name = res.reviews.reviewer_name;
             new_thing.review = res.reviews.review;
             new_thing.rating = res.reviews.rating;
-            //new_thing.reviews = res.reviews;
 
             // res.movies.reviews = res.reviews;
             // dispatch(movieFetched(res.movies));
