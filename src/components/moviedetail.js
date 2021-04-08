@@ -19,6 +19,10 @@ class MovieDetail extends Component {
         const DetailInfo = () => {
             if (!this.props.selectedMovie) {
                 return <div>Loading....</div>
+            } else {
+                console.log("bobobobobbo");
+                console.log(this.props.selectedMovie);
+                console.log(this.props.selectedMovie.reviews);
             }
 
             return (
@@ -38,8 +42,7 @@ class MovieDetail extends Component {
                     </ListGroup>
                     <Card.Body>
                         <p>
-                            <b>{this.props.selectedMovie.reviews.reviewer_name}</b>&nbsp; {this.props.selectedMovie.reviews.review}
-                            &nbsp;  <BsStarFill /> {this.props.selectedMovie.reviews.rating}
+                            
                         </p>
                     </Card.Body>
                 </Card>
