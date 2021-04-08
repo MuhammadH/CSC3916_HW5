@@ -22,7 +22,9 @@ class MovieDetail extends Component {
             } else {
                 console.log("bobobobobbo");
                 console.log(this.props.selectedMovie);
-                console.log(this.props.selectedMovie.reviews);
+                console.log(this.props.selectedMovie.review);
+                console.log(this.props.selectedMovie.rating);
+                console.log(this.props.selectedMovie.reviewer_name);
             }
 
             return (
@@ -42,8 +44,8 @@ class MovieDetail extends Component {
                     </ListGroup>
                     <Card.Body>
                         <p>
-                            <b>{this.props.selectedMovie.reviews[0]}</b>&nbsp; {this.props.selectedMovie.reviews[0]}
-                            &nbsp;  <BsStarFill /> {this.props.selectedMovie.reviews[0]}
+                            <b>{this.props.selectedMovie.reviewer_name}</b>&nbsp; {this.props.selectedMovie.review}
+                            &nbsp;  <BsStarFill /> {this.props.selectedMovie.rating}
                         </p>
                     </Card.Body>
                 </Card>
