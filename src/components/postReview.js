@@ -11,7 +11,7 @@ class PostReview extends Component {
         this.state = {
             reviewData:{
                 movie: movieIn.movie.title,
-                reviewer_name: '',
+                reviewer_name: 'default_test',
                 review: '',
                 rating: ''
             }
